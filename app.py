@@ -90,6 +90,7 @@ def main():
             predictions = model.predict(processed_image)
             # st.write(predictions)
             predicted_class = np.argmax(predictions, axis = 1)
+            st.write(predictions)
             #Adenocarcinoma, Normal, Squamous Cell Carcinoma
             if(predicted_class == [0]):
                 st.write(f"Predicted class: Adenocarcinoma")
